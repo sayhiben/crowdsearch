@@ -30,9 +30,19 @@ IFS='' read -r -d '' INSTRUCTION <<"EOF"
 
 REVIEW THE SOURCE CODE FOR THIS PROJECT AND THEN PERFORM THE FOLLOWING TASK:  
 
-## ISSUE:
+## CREATE A README FILE
 
-The modal form that appears when the "Add to Database" button is clicked inherits the CSS styles from the source page, and sometimes it's unreadable. Update the modal form's styles to ensure that it's readable and visually appealing.
+This project is missing a README file. Create a README file that includes the following sections:
+
+1. Project Description
+2. Installation Instructions for end-users who only want to contribute to a shared Google Sheet
+3. Installation Instructions for users who want to set up their own Google Sheet
+4. Instructions for how to use the extension
+5. Instructions for how to contribute to the project, including how to set up the development environment
+
+Each section should be clearly labeled and easy to read. The README file should be written in GitHub-flavored Markdown.
+
+Sections should include examples to the greatest extent possible. Step-by-step instructions should be provided for non-developer end-users, of which there may be many
 
 EOF
 
