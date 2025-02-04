@@ -155,3 +155,8 @@ If you’d like to improve or customize this extension, you can **clone** and **
 4. Suggesting or Submitting Changes
     - If you see a bug or have a feature request, open an issue.
     - Pull requests are welcome! Please branch off main (or the designated stable branch).
+5. Releasing a new distributable extension
+    - Install web-ext: `npm install --global web-ext`
+    - Open the directory containing manifest.json and run web-ext: `web-ext build -a dist`
+    - Rename the new zip file to `.xpi`: `mv dist/crowdsearch-1.0.zip dist/crowdsearch-1.0.xpi`
+    - Create a new Release in GitHub with the gh cli: 
