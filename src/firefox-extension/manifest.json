@@ -1,0 +1,54 @@
+{
+  "manifest_version": 2,
+  "name": "Crowdsearch",
+  "version": "1.0",
+  "description": "Extracts event data from multiple sites to store them in a Google Sheet.",
+  "icons": {
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "activeTab",
+    "storage",
+    "webRequest",
+    "webRequestBlocking",
+    "webNavigation",
+    "*://*.bsky.app/*",
+    "*://*.google.com/*",
+    "*://*.reddit.com/*",
+    "*://*.facebook.com/*",
+    "*://*.instagram.com/*",
+    "*://*.tiktok.com/*",
+    "*://*.twitter.com/*",
+    "https://script.google.com/*"
+  ],
+  "browser_action": {
+    "default_title": "Crowdsearch",
+    "default_icon": {
+      "48": "icons/icon48.png"
+    },
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "scripts": ["background.js"]
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.bsky.app/*",
+        "*://*.google.com/*",
+        "*://*.reddit.com/*",
+        "*://*.facebook.com/*",
+        "*://*.instagram.com/*",
+        "*://*.tiktok.com/*",
+        "*://*.twitter.com/*"
+      ],
+      "js": ["content-script.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "options_ui": {
+    "page": "options.html",
+    "chrome_style": false
+  }
+}
